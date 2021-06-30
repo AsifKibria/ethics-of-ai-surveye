@@ -259,3 +259,10 @@ footer {
     border-color: #444;
     height: 500px;
 }
+
+.approve-reject{
+    padding-left: 60px;
+    padding-top : 20px;
+    float: left;
+    margin-left: 140px;
+}
