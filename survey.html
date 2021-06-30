@@ -1,22 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0">
-    <title>
-        Surv-Eye
-    </title>
-    <link rel="stylesheet" href="css/survey.css" />
- 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surv-Eye</title>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <style>
  
         /* Styling the Body element i.e. Color,
         Font, Alignment */
         body {
-            background-color: #05c46b;
+            background-color: #bdc5c1;
             font-family: Verdana;
             text-align: center;
         }
@@ -65,10 +61,10 @@
  
         /* Styling Button */
         button {
-            background-color: #05c46b;
-            border: 1px solid #777;
+            background-color: #dfe2e1;
+            color: #7a7c7b;
             border-radius: 2px;
-            font-family: inherit;
+            font-family: "Impact", fantasy;
             font-size: 21px;
             display: block;
             width: 100%;
@@ -79,151 +75,172 @@
         canvas {
         position: absolute;
         }
+
+        #result-face{
+            position: absolute;
+            top: 80px;
+            right: 50;
+            width: 200px;
+            height: 120px;
+        }
+
     </style>
+
 </head>
-  
+ 
 <body>
+  <header>
+    <div class="wrapper">
+        <h1>Surv-Eye<span class="color">.</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/survey.html">Survey</a></li>
+                <li><a href="/statistics.html">Statistics</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>
 
+  <div>
     <video id="video" height="200" width="300" autoplay muted></video>
-
+    <div id= "result-face"></div>
     <script src="js/face-api.min.js"></script>
     <script src="js/main.js"></script>
+  </div>
 
+  <div>
+  <h1>Survey Form</h1>
 
-    <h1>GeeksforGeeks Survey Form</h1>
-  
-    <!-- Create Form -->
-    <form id="form">
- 
-        <!-- Details -->
-        <div class="form-control">
-            <label for="name" id="label-name">
-                Name
-            </label>
- 
-            <!-- Input Type Text -->
-            <input type="text"
-                   id="name"
-                   placeholder="Enter your name" />
-        </div>
-  
-        <div class="form-control">
-            <label for="email" id="label-email">
-                Email
-            </label>
- 
-            <!-- Input Type Email-->
-            <input type="email"
-                   id="email"
-                   placeholder="Enter your email" />
-        </div>
-  
-        <div class="form-control">
-            <label for="age" id="label-age">
-                Age
-            </label>
- 
-            <!-- Input Type Text -->
-            <input type="text"
-                   id="age"
-                   placeholder="Enter your age" />
-        </div>
-  
-        <div class="form-control">
-            <label for="role" id="label-role">
-                Which option best describes you?
-            </label>
-             
-            <!-- Dropdown options -->
-            <select name="role" id="role">
-                <option value="student">Student</option>
-                <option value="intern">Intern</option>
-                <option value="professional">
-                    Professional
-                </option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-  
-        <div class="form-control">
-            <label>
-                Would you recommed GeeksforGeeks
-                to a friend?
-            </label>
- 
-            <!-- Input Type Radio Button -->
-            <label for="recommed-1">
-                <input type="radio"
-                       id="recommed-1"
-                       name="recommed">Yes</input>
-            </label>
-            <label for="recommed-2">
-                <input type="radio"
-                       id="recommed-2"
-                       name="recommed">No</input>
-            </label>
-            <label for="recommed-3">
-                <input type="radio"
-                       id="recommed-3"
-                       name="recommed">Maybe</input>
-            </label>
-        </div>
-  
-        <div class="form-control">
-            <label>Languages and Frameworks known
-                <small>(Check all that apply)</small>
-            </label>
-            <!-- Input Type Checkbox -->
-            <label for="inp-1">
-                <input type="checkbox"
-                       name="inp">C</input></label>
-            <label for="inp-2">
-                <input type="checkbox"
-                       name="inp">C++</input></label>
-            <label for="inp-3">
-                <input type="checkbox"
-                       name="inp">C#</input></label>
-            <label for="inp-4">
-                <input type="checkbox"
-                       name="inp">Java</input></label>
-            <label for="inp-5">
-                <input type="checkbox"
-                       name="inp">Python</input></label>
-            <label for="inp-6">
-                <input type="checkbox"
-                       name="inp">JavaScript</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">React</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">Angular</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">Django</input></label>
-            <label for="inp-7">
-                <input type="checkbox"
-                       name="inp">Spring</input></label>
-        </div>
-  
-        <div class="form-control">
-            <label for="comment">
-                Any comments or suggestions
-            </label>
- 
-            <!-- multi-line text input control -->
-            <textarea name="comment" id="comment"
-                placeholder="Enter your comment here">
-            </textarea>
-        </div>
-  
-        <!-- Multi-line Text Input Control -->
-        <button type="submit" value="submit" onclick="location.href='/statistics.html'">
-            Submit 
-        </button>
+  <!-- Create Form -->
+  <form id="form">
 
+      <!-- Details -->
+      <div class="form-control">
+          <label for="name" id="label-name">
+              Name
+          </label>
 
-    </form>
+          <!-- Input Type Text -->
+          <input type="text"
+                 id="name"
+                 placeholder="Enter your name" />
+      </div>
+
+      <div class="form-control">
+          <label for="email" id="label-email">
+              Email
+          </label>
+
+          <!-- Input Type Email-->
+          <input type="email"
+                 id="email"
+                 placeholder="Enter your email" />
+      </div>
+
+      <div class="form-control">
+          <label for="age" id="label-age">
+              Age
+          </label>
+
+          <!-- Input Type Text -->
+          <input type="text"
+                 id="age"
+                 placeholder="Enter your age" />
+      </div>
+
+      <div class="form-control">
+          <label for="role" id="label-role">
+              Which option best describes you?
+          </label>
+           
+          <!-- Dropdown options -->
+          <select name="role" id="role">
+              <option value="student">Student</option>
+              <option value="intern">Intern</option>
+              <option value="professional">
+                  Professional
+              </option>
+              <option value="other">Other</option>
+          </select>
+      </div>
+
+      <div class="form-control">
+          <label>
+              Would you recommed GeeksforGeeks
+              to a friend?
+          </label>
+
+          <!-- Input Type Radio Button -->
+          <label for="recommed-1">
+              <input type="radio"
+                     id="recommed-1"
+                     name="recommed">Yes</input>
+          </label>
+          <label for="recommed-2">
+              <input type="radio"
+                     id="recommed-2"
+                     name="recommed">No</input>
+          </label>
+          <label for="recommed-3">
+              <input type="radio"
+                     id="recommed-3"
+                     name="recommed">Maybe</input>
+          </label>
+      </div>
+
+      <div class="form-control">
+          <label>Languages and Frameworks known
+              <small>(Check all that apply)</small>
+          </label>
+          <!-- Input Type Checkbox -->
+          <label for="inp-1">
+              <input type="checkbox"
+                     name="inp">C</input></label>
+          <label for="inp-2">
+              <input type="checkbox"
+                     name="inp">C++</input></label>
+          <label for="inp-3">
+              <input type="checkbox"
+                     name="inp">C#</input></label>
+          <label for="inp-4">
+              <input type="checkbox"
+                     name="inp">Java</input></label>
+      </div>
+
+      <div class="form-control">
+          <label for="comment">
+              Any comments or suggestions
+          </label>
+
+          <!-- multi-line text input control -->
+          <textarea name="comment" id="comment"
+              placeholder="Enter your comment here">
+          </textarea>
+      </div>
+
+      <!-- Multi-line Text Input Control -->
+      <a href="/statistics.html" class="button-1">Submit</a>
+  </form>
+</div>
+    
+    <footer>
+      <div class="wrapper">
+          <div id="footer-info">
+              <p>Copyright 2021 Surv-Eye. All rights reserved.</p>
+              <p><a href="#">Terms of Service</a> I <a href="#">Privacy</a></p>
+          </div>
+          <div id="footer-links">
+              <ul>
+                  <h5>Company</h5>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">The Team</a></li>
+                  <li><a href="#">What We Do</a></li>
+              </ul>
+          </div>
+          <div class="clear"></div>
+      </div>
+  </footer>
+    
 </body>
-  
 </html>

@@ -43,6 +43,18 @@ h5 {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+h6 {
+    font-size: 75px;
+    font-family: "Impact", fantasy;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 100;
+    text-shadow: 2px 2px #2e2341;
+  }
+
 a {
     text-decoration: none;
     color: #444;
@@ -95,10 +107,11 @@ header nav ul li a {
 #hero-image {
     height: 580px;
     padding-top: 1px;
-    background: #e8eced url('../images/hero.jpg') no-repeat center;
+    background: url(/assets/grey-faces.jpg) no-repeat center;
 }
 #hero-image h2 {
     margin: 180px 0 40px 0;
+    
 }
 .button-1 {
     display: block;
@@ -118,14 +131,17 @@ header nav ul li a {
 }
 
 #features ul {
-    margin: 80px 0;
+    margin: 40px 0;
+    list-style-type: none;
 }
 #features ul li {
-    width: 300px;
-    padding-top: 140px;
+    width: 450px;
+    padding-top: 20px;
+    padding-bottom: 80px;
     float: left;
-    margin-right: 10px;
+    margin: center;
     text-align: center;
+    list-style-type: none;
 }
 #features ul li.feature-1 {
     background: url('../images/features-icon-1.png') no-repeat top center;
@@ -133,9 +149,7 @@ header nav ul li a {
 #features ul li.feature-2 {
     background: url('../images/features-icon-2.png') no-repeat top center;
 }
-#features ul li.feature-3 {
-    background: url('../images/features-icon-3.png') no-repeat top center;
-}
+
 
 #primary-content {
     background-color: #f8fafa;
@@ -145,7 +159,7 @@ header nav ul li a {
 #primary-content h3 {
     display: block;
     margin: 0 auto 20px auto;
-    width: 400px;
+    width: 600px;
     border-bottom: 1px solid #02b8dd;
     padding: 0 0 20px 0;
 }
@@ -234,4 +248,12 @@ footer {
 }
 #footer-links ul li {
     margin: 10px 0;
+}
+
+#stats{
+    padding-top: 100px;
+    padding-left: 80px;
+    background: rgb(255, 255, 255);
+    border-color: #444;
+    height: 500px;
 }
