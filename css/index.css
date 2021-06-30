@@ -6,6 +6,8 @@ body {
 p {
     line-height: 20px;
     margin-bottom: 20px;
+    text-align: justify;
+    padding-right: 25px;
 }
 h1 {
     font-family: 'Crete Round', serif;
@@ -131,7 +133,7 @@ header nav ul li a {
 }
 
 #features ul {
-    margin: 40px 0;
+    margin: 20px 0;
     list-style-type: none;
 }
 #features ul li {
