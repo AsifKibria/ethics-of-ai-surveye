@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   
@@ -8,8 +7,9 @@
     <meta name="viewport" content=
         "width=device-width, initial-scale=1.0">
     <title>
-        Surv
+        Surv-Eye
     </title>
+    <link rel="stylesheet" href="css/survey.css" />
  
     <style>
  
@@ -20,7 +20,7 @@
             font-family: Verdana;
             text-align: center;
         }
- 
+
         /* Styling the Form (Color, Padding, Shadow) */
         form {
             background-color: #fff;
@@ -75,10 +75,21 @@
             margin-top: 50px;
             margin-bottom: 20px;
         }
+
+        canvas {
+        position: absolute;
+        }
     </style>
 </head>
   
 <body>
+
+    <video id="video" height="200" width="300" autoplay muted></video>
+
+    <script src="js/face-api.min.js"></script>
+    <script src="js/main.js"></script>
+
+
     <h1>GeeksforGeeks Survey Form</h1>
   
     <!-- Create Form -->
@@ -207,9 +218,11 @@
         </div>
   
         <!-- Multi-line Text Input Control -->
-        <button type="submit" value="submit">
-            Submit
+        <button type="submit" value="submit" onclick="location.href='/statistics.html'">
+            Submit 
         </button>
+
+
     </form>
 </body>
   
